@@ -1,0 +1,103 @@
+
+
+<!-- 账单模板 -->
+<template name='bill_list'>
+  <!-- 充值模板 -->
+  <view class='charge' wx:if="{{ item.act == 'charge' }}">
+    <view class='l'>
+      <view class='txt'>
+        <text>充值</text>
+      </view>
+    </view>
+  <view class='c'>
+      <view class='time'>
+        <text>{{ item.time }}</text>
+      </view>
+      <view class='to'> 
+      <text>{{ item.before }} → {{ item.after }}</text>
+      </view>
+    </view>
+    <view class='r'>
+      <text>+{{ item.change }}</text>
+    </view>
+  </view>
+
+    <!-- 提现模板 -->
+  <view class='withdraw' wx:if="{{ item.act == 'withdraw' }}">
+    <view class='l'>
+      <view class='txt'>
+        <text>提现</text>
+      </view>
+    </view>
+    <view class='c'>
+      <view class='time'>
+        <text>{{ item.time }}</text>
+      </view>
+      <view class='to'> 
+      <text>{{ item.before }} → {{ item.after }}</text>
+      </view>
+    </view>
+    <view class='r'>
+      <text>-{{ item.change }}</text>
+    </view>
+  </view>
+
+    <!-- 购买模板 -->
+  <view class='buy' wx:if="{{ item.act == 'buy' }}">
+    <view class='l'>
+      <view class='txt'>
+        <text>购买</text>
+      </view>
+    </view>
+  <view class='c'>
+      <view class='time'>
+        <text>{{ item.time }}</text>
+      </view>
+      <view class='to'> 
+      <text>{{ item.before }} → {{ item.after }}</text>
+      </view>
+    </view>
+    <view class='r'>
+      <text>-{{ item.change }}</text>
+    </view>
+  </view>
+
+    <!-- 售出模板 -->
+  <view class='sell' wx:if="{{ item.act == 'sell' }}">
+    <view class='l'>
+      <view class='txt'>
+        <text>售出</text>
+      </view>
+    </view>
+  <view class='c'>
+      <view class='time'>
+        <text>{{ item.time }}</text>
+      </view>
+      <view class='to'> 
+      <text>{{ item.before }} → {{ item.after }}</text>
+      </view>
+    </view>
+    <view class='r'>
+      <text>+{{ item.change }}</text>
+    </view>
+  </view>
+
+    <!-- 在售模板 -->
+  <view class='selling' wx:if="{{ item.act == 'selling' }}">
+    <view class='l'>
+      <view class='id'>
+        <text>机器编号：</text>
+        <text>{{ item.id }}</text>
+      </view>
+      <view class='num'>
+        <text>格子编号：</text>
+        <text>{{ item.num }}</text>
+      </view>
+    </view>
+    <view class='r'>
+      <text>￥ {{ item.price }}</text>
+    </view>
+  </view>
+</template>
+
+

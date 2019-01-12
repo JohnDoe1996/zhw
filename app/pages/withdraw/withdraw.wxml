@@ -1,0 +1,28 @@
+<!--pages/withdraw/withdraw.wxml-->
+<view class='user'>
+  <view class='user-nickname'>
+    <text>{{ userInfo.nickName }}</text>
+  </view>
+  <view class='user-avatar'>
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+  </view>
+</view>
+
+<view class='center'>
+  <view class='balance'>
+    <text class='balance-txt'>您的可提现金额：</text><text class='balance-val'>{{balance}}</text>
+  </view>
+  <form bindsubmit='withdrawSubmit'>
+    <view class='withdraw'>
+      <view class='txt'><text>请输入要提现的金额：</text></view>
+      <view class='input'>
+        <text>￥</text>
+        <input id='money' name='money' type='digit'></input>
+      </view>
+      <view class='btn'>
+        <button form-type='submit'>确认提现</button>
+      </view>
+    </view>
+
+  </form>
+</view>

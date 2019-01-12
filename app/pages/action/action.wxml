@@ -1,0 +1,60 @@
+<!--pages/action/action.wxml-->
+<view class='user'>
+  <view class='user-nickname'>
+    <text>{{ userInfo.nickName }}</text>
+  </view>
+  <view class='user-avatar'>
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+  </view>
+</view>
+
+<view class='main'>
+
+  <view class='codedata'>
+    <view>
+      <text>机器编号：</text>
+      <text class='codeid'>{{ code.id }}</text>
+    </view>
+      <view>
+      <text>格子编号：</text>
+      <text class='codenum'>{{ code.num }}</text>
+    </view>
+  </view>
+
+  <view class='center' wx:if='{{ act == "sell" }}'>
+    <form class='center-form' bindsubmit='sellSubmit'>
+      <view class='txt'>
+        <text>请设置商品金额：</text>
+      </view>
+      <view class='number'>
+        ￥<input type='digit' name='value'></input>
+      </view>
+      <view class='btn'>
+        <button form-type='submit'>提 交</button>
+      </view>
+    </form>
+  </view>
+
+  <view class='center' wx:elif='{{ act == "buy" }}'>
+    <view class='center-form' >
+      <view  class='txt'>
+        <text>此商品价格：</text>
+      </view>
+      <view class='number'>
+        <text>￥ {{ price }}</text>
+      </view>
+      <view class='btn'>
+        <button catchtap='buySubmit'>确认购买</button>
+      </view>
+    </view>
+  </view>
+
+  <view class='center' wx:else >
+    <view  class='txt'>
+      <text>操作失败：</text>
+    </view>
+    <view class='errmsg'>
+      <text>{{ errmsg }}</text>
+    </view>
+  </view>
+</view>

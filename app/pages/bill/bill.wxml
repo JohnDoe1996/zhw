@@ -1,0 +1,19 @@
+<!--pages/bill/bill.wxml-->
+<import src='./templates/templates.wxml'/>
+
+<view class='user'>
+  <view class='user-nickname'>
+    <text>{{ userInfo.nickName }}</text>
+  </view>
+  <view class='user-avatar'>
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+  </view>
+</view>
+
+<view style='height:200rpx;background-color:#FFFFFF;'></view>
+
+<view>
+  <template wx:for="{{ bill }}" is="bill_list" data="{{ item }}" wx:key="this"></template>
+</view>
+
+

@@ -1,0 +1,24 @@
+<!--pages/balance/balance.wxml-->
+<view class='user'>
+  <view class='user-nickname'>
+    <text>{{ userInfo.nickName }}</text>
+  </view>
+  <view class='user-avatar'>
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+  </view>
+</view>
+
+<view class='center'>
+  <view class='hello'>
+    <text>您当前的余额:</text>
+  </view>
+  <view class='balance'>
+    <text>￥ {{ balance }}</text>
+  </view>
+  <view class='charge'>
+    <button id='charge' catchtap='gotoPage'>充值</button>
+  </view>
+  <view class='withdraw'>
+    <button id='withdraw' catchtap='gotoPage'>提现</button>
+  </view>
+</view>

@@ -1,0 +1,24 @@
+<!--pages/accredit/accredit.wxml-->
+<view class='info'>
+  <view class='logo'>
+    <view><image src='/images/logo.png'></image></view>
+  </view>
+  <view class='name'>
+    <text>无人格子铺</text>
+  </view>
+</view>
+<view class='txt'>
+  <view>
+    <text>为了更好的使用体验</text>
+  </view>
+  <view>
+    <text>请先确认登录</text>
+  </view>
+  <view class='s'>
+    <text>我们将会获取你的微信公开信息(昵称、头像等)</text>
+  </view>
+</view>
+<view class='btn'>
+  <button catchtap='userLogin' open-type='getUserInfo'>确认登录</button>
+</view>
+

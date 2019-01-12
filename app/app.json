@@ -1,0 +1,19 @@
+{
+  "pages": [
+
+    "pages/accredit/accredit",
+    "pages/index/index",
+    "pages/action/action",
+    "pages/balance/balance",
+    "pages/bill/bill",
+    "pages/history/history",
+    "pages/charge/charge",
+    "pages/withdraw/withdraw"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#87CEEB",
+    "navigationBarTitleText": "无人格子铺",
+    "navigationBarTextStyle": "#fff"
+  }
+}

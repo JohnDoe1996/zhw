@@ -1,0 +1,99 @@
+
+.charge,.withdraw,.buy,.sell{
+	width: 100%;
+	height: 150rpx;
+	background-color: #FFFFFF;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 20rpx;
+}
+
+.l{
+	width: 150rpx;
+	text-align: center;
+	font-size: 60rpx;
+}
+
+.c{
+	width: 300rpx;
+}
+
+.c .time text{
+	font-size: 30rpx;
+	text-align: center;
+}
+
+.c .to text{
+	text-align: center;
+	color: #999999;
+}
+
+.r{
+	width: 200rpx;
+	text-align: center;
+	font-size: 50rpx;
+	font-weight: bold;
+}
+
+.charge{ 
+	border-top: solid 15rpx;
+	border-top-color: #FF0000;
+}
+.charge .r{
+	color: #FF0000;
+}
+
+.withdraw{ 
+	border-top: solid 15rpx;
+	border-top-color: #7FFFD4;
+}
+.withdraw .r{
+	color: #7FFFD4;
+}
+
+.buy{ 
+	border-top: solid 15rpx;
+	border-top-color: #FFA500;
+}
+.buy .r{
+	color: #FFA500;
+}
+
+.sell{ 
+	border-top: solid 15rpx;
+	border-top-color: #13BEEC;
+}
+.sell .r{
+	color: #13BEEC;
+}
+
+.selling{
+	width: 100%;
+	height: 150rpx;
+	background-color: #FFFFFF;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 20rpx;
+	border-top: solid 15rpx;
+	border-top-color:blueviolet;
+}
+
+.selling .l{
+	width: 400rpx;
+	font-size: 50rpx;
+	text-align: left;
+}
+
+.selling .l .id text:last-child{
+	color: #13BEEC;
+}
+
+.selling .l .num text:last-child{
+	color: #FFA500;
+}
+
+.selling .r{
+	width: 250rpx;
+}
